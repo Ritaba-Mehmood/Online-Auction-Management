@@ -1,0 +1,77 @@
+﻿ 
+
+
+
+                    @model SemesterProj.Models.Item
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell New Item - AuctionHub</title>
+</head>
+<body style="background-color: #121212; min-height: 100vh; margin: 0; display: flex; flex-direction: column; justify-content: center;">
+    <div class="container mt-5 mb-5 d-flex justify-content-center align-items-center">
+        <div class="card shadow-lg p-4" style="background-color: #ffffff; width: 600px; border-radius: 12px;">
+            <h2 class="text-center mb-4" style="color: #DAA520;">Sell New Item</h2>
+            <form asp-action="Sell" method="post" enctype="multipart/form-data">
+                <!-- Form Fields -->
+                <div class="form-group mb-3">
+                    <label asp-for="Title" style="color: #000000;">Title</label>
+                    <input asp-for="Title" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" style="color: #000000;">Description</label>
+                    <textarea asp-for="Description" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label style="color: #000000;">Item Image</label>
+                    <input type="file" name="imageFile" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;" accept=".jpg,.jpeg,.png" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="MinBid" style="color: #000000;">Minimum Bid ($)</label>
+                    <input asp-for="MinBid" type="number" step="0.01" min="0.01" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;" />
+                    <span asp-validation-for="MinBid" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="BidIncrement" style="color: #000000;">Bid Increment ($)</label>
+                    <input asp-for="BidIncrement" type="number" step="0.01" min="0.01" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;" />
+                    <span asp-validation-for="BidIncrement" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="BidStartDate" style="color: #000000;">Bidding Start Date</label>
+                    <input asp-for="BidStartDate" type="datetime-local" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;" />
+                    <span asp-validation-for="BidStartDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="BidEndDate" style="color: #000000;">Bidding End Date</label>
+                    <input asp-for="BidEndDate" type="datetime-local" class="form-control" style="background-color: #ffffff; color: #000000; border-color: #DAA520;" />
+                    <span asp-validation-for="BidEndDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="CategoryId" style="color: #000000;">Select Category</label>
+                    <select asp-for="CategoryId" asp-items="ViewBag.Categories"
+                            class="form-control"
+                            style="background-color: #ffffff; color: #000000; border-color: #DAA520;">
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn w-100" style="background-color: #DAA520; color: #121212;">List Item for Sale</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+  

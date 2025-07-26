@@ -1,0 +1,121 @@
+﻿:root {
+    --primary: #121212;
+    --secondary: #DAA520;
+    --accent: #FFFFFF;
+    --dark-gold: #B8860B;
+    --light-gold: #FFD700;
+    --gray: #1E1E1E;
+    --card-bg: #1a1a1a;
+    --sidebar-width: 280px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--accent);
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--primary);
+    border-right: 1px solid rgba(218, 165, 32, 0.2);
+    height: 100vh;
+    position: fixed;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.logo-container {
+    padding: 0 25px 30px;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.1);
+    margin-bottom: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .logo i {
+        margin-right: 12px;
+        color: var(--light-gold);
+    }
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0 15px;
+}
+
+.menu-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #777;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+}
+
+.menu-item {
+    margin-bottom: 8px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+    .menu-link i {
+        width: 30px;
+        font-size: 1.2rem;
+        color: var(--secondary);
+    }
+
+    .menu-link:hover,
+    .menu-link.active {
+        background: rgba(218, 165, 32, 0.1);
+        color: var(--secondary);
+    }
+
+    .menu-link.active {
+        border-left: 4px solid var(--secondary);
+    }
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    transition: all 0.3s ease;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--primary);
+    border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}

@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionHub - How It Works</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #121212;
+            --secondary: #DAA520;
+            --accent: #FFFFFF;
+            --dark-gold: #B8860B;
+            --light-gold: #FFD700;
+            --gray: #1E1E1E;
+            --card-bg: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--accent);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: radial-gradient(circle at 10% 20%, rgba(218, 165, 32, 0.05) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(218, 165, 32, 0.05) 0%, transparent 20%);
+        }
+         
+         
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 5%;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--light-gold);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark-gold) 100%);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
+        }
+
+            .cta-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(218, 165, 32, 0.5);
+            }
+
+        /* Process Section */
+        .process-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--light-gold);
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+            .section-title:after {
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 4px;
+                background: var(--secondary);
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 2px;
+            }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .step-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(218, 165, 32, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+            .step-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--secondary);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            z-index: 1;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(218, 165, 32, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .step-title {
+            font-size: 1.8rem;
+            color: var(--light-gold);
+        }
+
+        .step-content {
+            margin-bottom: 25px;
+            line-height: 1.7;
+            z-index: 2;
+            position: relative;
+        }
+
+        .step-participants {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .participant {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+            .participant i {
+                color: var(--secondary);
+            }
+
+                    .timeline::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background: var(--secondary);
+                top: 50px; /* Adjust for alignment */
+                bottom: 50px;
+                left: 50%; /* Center vertical line */
+                transform: translateX(-50%);
+                border-radius: 3px;
+            }
+
+        /* Remove the vertical line */
+        .timeline::after {
+            display: none;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 45%; /* Take up half the screen minus some space for centering */
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid rgba(218, 165, 32, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+        }
+
+            .timeline-item:nth-child(odd) {
+                left: 0; /* Align odd items to the left */
+                transform: translateX(0);
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%; /* Align even items to the right */
+                transform: translateX(0);
+            }
+ 
+        .timeline-item,
+        .step-card {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            background: var(--card-bg);
+            border: 1px solid rgba(218, 165, 32, 0.1);
+        }
+        .timeline-content {
+            padding: 30px;
+            margin: 0;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid rgba(218, 165, 32, 0.1);
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+            .timeline-content:after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 30px;
+                z-index: 1;
+                transform: rotate(45deg);
+                background: var(--card-bg);
+                border-right: 1px solid rgba(218, 165, 32, 0.1);
+                border-bottom: 1px solid rgba(218, 165, 32, 0.1);
+            }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -15px; /* Arrow pointing to the center line */
+            width: 20px;
+            height: 20px;
+            background: var(--card-bg);
+            border-left: 1px solid rgba(218, 165, 32, 0.1);
+            border-top: 1px solid rgba(218, 165, 32, 0.1);
+            transform: rotate(45deg);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -15px; /* Arrow pointing to the center line */
+            width: 20px;
+            height: 20px;
+            background: var(--card-bg);
+            border-right: 1px solid rgba(218, 165, 32, 0.1);
+            border-top: 1px solid rgba(218, 165, 32, 0.1);
+            transform: rotate(45deg);
+        }
+
+        .timeline-circle {
+            position: absolute;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            border: 5px solid var(--primary);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-circle {
+            right: -15px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-circle {
+            left: -15px;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: var(--light-gold);
+            margin-bottom: 15px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 5%;
+        }
+
+        .faq-container {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid rgba(218, 165, 32, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 25px;
+        }
+
+            .faq-item:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+            .faq-question i {
+                color: var(--secondary);
+                transition: transform 0.3s ease;
+            }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: #aaa;
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+    
+ 
+         
+
+         
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+                .timeline-item:nth-child(odd) .timeline-content:after,
+                .timeline-item:nth-child(even) .timeline-content:after {
+                    left: 20px;
+                    top: -10px;
+                    border: none;
+                    border-left: 1px solid rgba(218, 165, 32, 0.1);
+                    border-top: 1px solid rgba(218, 165, 32, 0.1);
+                }
+
+                .timeline-item:nth-child(odd) .timeline-circle,
+                .timeline-item:nth-child(even) .timeline-circle {
+                    left: 15px;
+                }
+
+         
+
+  
+    </style>
+
+</head>
+<body>
+   
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">How AuctionHub Works</h1>
+        <p class="hero-subtitle">Discover our simple, secure process for buying and selling premium items through our trusted auction platform</p>
+        <a href="#" class="cta-btn">Start Bidding Now</a>
+    </section>
+
+    <section class="process-section">
+        <h2 class="section-title">The AuctionHub Process</h2>
+        <div class="process-steps">
+            <!-- Step 1: Create Account -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 class="step-title">Create Account</h3>
+                </div>
+                <div class="step-content">
+                    <p>Sign up for a free AuctionHub account. Complete your profile with verification to unlock full platform features. Registration takes less than 2 minutes.</p>
+                </div>
+            </div>
+            <!-- Step 2: List Your Item -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 class="step-title">List Your Item</h3>
+                </div>
+                <div class="step-content">
+                    <p>Sellers fill out the item listing form with detailed descriptions, high-quality photos, and set auction parameters (starting bid, duration, reserve price).</p>
+                </div>
+            </div>
+            <!-- Step 3: Admin Approval -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="step-title">Admin Approval</h3>
+                </div>
+                <div class="step-content">
+                    <p>Our expert team reviews each listing for authenticity, quality, and compliance. Approved items go live within 24 hours. We ensure all listings meet our premium standards.</p>
+                </div>
+            </div>
+            <!-- Step 4: Seller Notification -->
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="step-title">Seller Notification</h3>
+                </div>
+                <div class="step-content">
+                    <p>Sellers receive notifications when their items go live and during significant bidding milestones. Stay updated in real-time via email or app notifications.</p>
+                </div>
+            </div>
+            <!-- Step 5: Buyer Notification & Next Steps -->
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="step-title">Buyer Notification</h3>
+                </div>
+                <div class="step-content">
+                    <p>Buyers are notified when their bid wins. They can securely proceed with payments and coordinate with the seller through the platform’s messaging system.</p>
+                </div>
+            </div>
+            <!-- Step 6: Active Bidding -->
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="step-title">Active Bidding</h3>
+                </div>
+                <div class="step-content">
+                    <p>Once live, buyers can place bids on your item. Our system automatically increases bids incrementally until your maximum is reached. Watch the competition in real-time!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <h2 class="section-title">After the Auction Ends</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">Notification & Payment</h3>
+                <p>When the auction ends, the winning bidder and seller receive instant notifications. The buyer completes payment securely through our platform within 48 hours.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">Shipping Preparation</h3>
+                <p>The seller receives shipping instructions and prepares the item for shipment. Our system provides printable shipping labels with insurance included for high-value items.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">Item Shipment</h3>
+                <p>The seller ships the item using our recommended carriers. Tracking information is automatically shared with the buyer. Most items arrive within 3-7 business days.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">Delivery & Confirmation</h3>
+                <p>The buyer receives the item and confirms satisfaction. Funds are released to the seller minus our competitive commission. Both parties leave feedback to build reputation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    How long does approval take for new listings?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our team reviews new listings within 24 hours. Premium members receive expedited review in under 4 hours. We verify authenticity, condition, and compliance with our listing policies.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What payment methods do you accept?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards, PayPal, bank transfers, and cryptocurrency. All payments are securely processed through our escrow system, with funds held until the buyer confirms item receipt.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How are shipping costs calculated?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Shipping costs vary by item size, weight, and destination. Our system provides accurate shipping estimates during checkout. High-value items include mandatory insurance at competitive rates.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What happens if an item doesn't sell?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If an item doesn't meet the reserve price, the seller can relist it at no extra cost. We offer suggestions to improve listing visibility and attractiveness based on market data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Animate step cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.step-card').forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(30px)";
+            card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(card);
+        });
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = "0";
+            item.style.transform = "translateX(30px)";
+            item.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(item);
+        });
+    </script>
+ 
+</body>
+</html>

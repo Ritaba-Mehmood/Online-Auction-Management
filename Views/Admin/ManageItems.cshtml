@@ -1,0 +1,107 @@
+﻿                    @model IEnumerable<SemesterProj.Models.Item>
+
+@{
+    ViewData["Title"] = "Manage Items";
+}
+<!-- Sidebar -->
+<div style="width: 220px; background-color: #121212; padding: 15px; position: fixed; left: 0; top: 0; height: 100%; color: #FFFFFF;">
+    <h3 style="color: #DAA520; text-align: center;">Admin Panel</h3>
+    <ul style="list-style-type: none; padding: 0; margin-top: 100px;">
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Categories" asp-action="Index" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-list" style="margin-right: 10px; color: #DAA520;"></i> Manage Categories
+            </a>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="ManageItems" asp-action="Index" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-box" style="margin-right: 10px; color: #DAA520;"></i> Manage Items
+            </a>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Item" asp-action="AllItems" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-list-alt" style="margin-right: 10px; color: #DAA520;"></i> All Items
+            </a>
+        </li>
+
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Admin" asp-action="Bid" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-gavel" style="margin-right: 10px; color: #DAA520;"></i> Bid Management
+            </a>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Reports" asp-action="Index" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-chart-line" style="margin-right: 10px; color: #DAA520;"></i> Reports
+            </a>
+        </li>
+        <li>
+            <a asp-controller="Account" asp-action="Logout" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-sign-out-alt" style="margin-right: 10px; color: #DAA520;"></i> Logout
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; min-height: 30vh; background-color: #121212; color: #FFFFFF; padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin-bottom:200px; margin-left:100px;">
+        <h2 class="text-center" style="color: #DAA520;">Pending Items for Approval</h2>
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+
+        <table class="table table-striped table-bordered" style="background-color: #FFFFFF; color: #121212; border: 1px solid #DAA520;">
+            <thead style="background-color: #DAA520; color: #121212;">
+                <tr>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Min Bid</th>
+                    <th>Category</th>
+                    <th>Seller</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.Image))
+                            {
+                                <img src="@Url.Content(item.Image)" alt="@item.Title" style="max-width: 100px; max-height: 100px;" />
+                            }
+                        </td>
+
+                        
+                        <td>@item.Description</td>
+                        <td>@item.MinBid.ToString("C")</td>
+                        <td>@item.Category?.Name</td>
+                        <td>@item.Seller?.Username</td>
+                        <td>@item.BidStartDate.ToString("g")</td>
+                        <td>@item.BidEndDate.ToString("g")</td>
+                        <td>
+                            <form asp-controller="ManageItems" asp-action="Approve" method="post" style="display: inline;">
+                                <input type="hidden" name="id" value="@item.ItemId" />
+                                <button type="submit" class="btn btn-sm" style="background-color: #DAA520; color: #121212;">Approve</button>
+                            </form>
+                            <form asp-controller="ManageItems" asp-action="Reject" method="post" style="display: inline;">
+                                <input type="hidden" name="id" value="@item.ItemId" />
+                                <button type="submit" class="btn btn-sm mt-1" style="background-color: #DAA520; color: #121212;">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-info text-center" style="background-color: #FFFFFF; color: #121212;">No pending items for approval</div>
+        }
+    </div>
+
+</div>

@@ -1,0 +1,184 @@
+﻿<div style="width: 220px; background-color: #121212; padding: 15px; position: fixed; left: 0; top: 0; height: 100%; color: #FFFFFF;">
+    <h3 style="color: #DAA520; text-align: center;">Admin Panel</h3>
+    <ul style="list-style-type: none; padding: 0; margin-top: 100px;">
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Categories" asp-action="Index" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-list" style="margin-right: 10px; color: #DAA520;"></i> Manage Categories
+            </a>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="ManageItems" asp-action="Index" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-box" style="margin-right: 10px; color: #DAA520;"></i> Manage Items
+            </a>
+        </li>
+        <a asp-controller="Item" asp-action="AllItems" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+            <i class="fas fa-list-alt" style="margin-right: 10px; color: #DAA520;"></i> All Items
+        </a>
+
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Admin" asp-action="Bid" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-gavel" style="margin-right: 10px; color: #DAA520;"></i> Bid Management
+            </a>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <a asp-controller="Reports" asp-action="Index" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-chart-line" style="margin-right: 10px; color: #DAA520;"></i> Reports
+            </a>
+        </li>
+        <li>
+            <a asp-controller="Account" asp-action="Logout" style="display: flex; align-items: center; text-decoration: none; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+                <i class="fas fa-sign-out-alt" style="margin-right: 10px; color: #DAA520;"></i> Logout
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div style="margin-left: 240px; padding: 20px;">
+    <h1 style="color: #121212;">Bid Management</h1>
+
+    <!-- Filters -->
+    <div style="margin-bottom: 20px; display: flex; gap: 15px;">
+        <select id="productFilter" class="form-select" style="padding: 10px; border-radius: 8px;">
+            <option value="all">All Products</option>
+            <option value="Diamond Ring">Diamond Ring</option>
+            <option value="Luxury Watch">Luxury Watch</option>
+            <option value="Antique Vase">Antique Vase</option>
+        </select>
+
+        <select id="userFilter" class="form-select" style="padding: 10px; border-radius: 8px;">
+            <option value="all">All Users</option>
+            <option value="ali">Ali</option>
+            <option value="aliza">Aliza</option>
+            <option value="saba">Saba</option>
+        </select>
+    </div>
+
+    <!-- Table -->
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
+        <thead style="background-color: #DAA520; color: #FFFFFF;">
+            <tr>
+                <th>Item Image</th>
+                <th>Item Name</th>
+                <th>User</th>
+                <th>Bid Amount</th>
+                <th>Bid Date</th>
+                <th>Notification</th>
+            </tr>
+        </thead>
+        <tbody id="bidTableBody" style="background-color: #F5F5F5; color: #121212;">
+            <!-- Populate Rows Manually -->
+            <tr>
+                <td><img src="/uploads/c9f4c53c-8c8f-42ae-aaab-f048c5772352.jpg" alt="Diamond Ring" style="width: 100px; border-radius: 8px;"></td>
+                <td>Diamond Ring</td>
+                <td>Ali</td>
+                <td>$500.00</td>
+                <td>2025-06-28</td>
+                <td>
+                    <button class="btn btn-sm notification-btn" onclick="sendNotification(this, 'Ali', 'Diamond Ring')" style="background-color: #DAA520; color: #FFFFFF; border: none; border-radius: 5px; padding: 5px 10px;">
+                        Send Notification
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="/uploads/bc85cf89-2b6e-4210-b2f5-93429d495f2f.jpg" alt="Luxury Watch" style="width: 100px; border-radius: 8px;"></td>
+                <td>Luxury Watch</td>
+                <td>Aliza</td>
+                <td>$1200.00</td>
+                <td>2025-06-28</td>
+                <td>
+                    <button class="btn btn-sm notification-btn" onclick="sendNotification(this, 'Ali', 'Diamond Ring')" style="background-color: #DAA520; color: #FFFFFF; border: none; border-radius: 5px; padding: 5px 10px;">
+                        Send Notification
+                    </button>
+                </td>
+            </tr>
+@*             <tr>
+                <td><img src="/uploads/bc77287d-4966-4e6e-a9c4-db6df087ba11.jpg" alt="Sports Car" style="width: 100px; border-radius: 8px;"></td>
+                <td>Sports Car</td>
+                <td>Aliza</td>
+                <td>$0.00</td>
+                <td>2025-06-28</td>
+                <td>
+                    <button class="btn btn-sm notification-btn" onclick="sendNotification(this, 'Ali', 'Diamond Ring')" style="background-color: #DAA520; color: #FFFFFF; border: none; border-radius: 5px; padding: 5px 10px;">
+                        Send Notification
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="/uploads/0763a70d-f890-4376-a6f7-5ac5cf27c56c.jpg" alt="Majestic Raven - Original Oil Painting" style="width: 100px; border-radius: 8px;"></td>
+                <td>Majestic Raven - Original Oil Painting</td>
+                <td>Aliza</td>
+                <td>$300.00</td>
+                <td>2025-06-28</td>
+                <td>
+                    <button class="btn btn-sm notification-btn" onclick="sendNotification(this, 'Ali', 'Diamond Ring')" style="background-color: #DAA520; color: #FFFFFF; border: none; border-radius: 5px; padding: 5px 10px;">
+                        Send Notification
+                    </button>
+                </td>
+            </tr> *@
+         @*    <tr>
+                <td><img src="/uploads/67e57e30-1bba-4a34-9160-6d1585e081f3.jpg" alt="Smartwatch" style="width: 100px; border-radius: 8px;"></td>
+                <td>Smartwatch</td>
+                <td>Aliza</td>
+                <td>$6000.00</td>
+                <td>2025-06-28</td>
+                <td>
+                    <button class="btn btn-sm notification-btn" onclick="sendNotification(this, 'Ali', 'Diamond Ring')" style="background-color: #DAA520; color: #FFFFFF; border: none; border-radius: 5px; padding: 5px 10px;">
+                        Send Notification
+                    </button>
+                </td>
+            </tr> *@
+            <tr>
+                <td><img src="/uploads/fc443ced-108e-40f5-90de-3ba9de233379.jpg" alt="Vintage Coin" style="width: 100px; border-radius: 8px;"></td>
+                <td>Vintage Coin</td>
+                <td>Aliza</td>
+                <td>$700.00</td>
+                <td>2025-06-28</td>
+                <td>
+                    <button class="btn btn-sm notification-btn" onclick="sendNotification(this, 'Ali', 'Diamond Ring')" style="background-color: #DAA520; color: #FFFFFF; border: none; border-radius: 5px; padding: 5px 10px;">
+                        Send Notification
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Filtering Logic
+    const productFilter = document.getElementById('productFilter');
+    const userFilter = document.getElementById('userFilter');
+    const rows = document.querySelectorAll('#bidTableBody tr');
+
+    function applyFilters() {
+        const selectedProduct = productFilter.value.toLowerCase();
+        const selectedUser = userFilter.value.toLowerCase();
+
+        rows.forEach(row => {
+            const productName = row.children[1].innerText.toLowerCase();
+            const username = row.children[2].innerText.toLowerCase();
+
+            const matchesProduct = selectedProduct === 'all' || productName.includes(selectedProduct);
+            const matchesUser = selectedUser === 'all' || username.includes(selectedUser);
+
+            row.style.display = matchesProduct && matchesUser ? '' : 'none';
+        });
+    }
+
+    productFilter.addEventListener('change', applyFilters);
+    userFilter.addEventListener('change', applyFilters);
+
+
+
+
+    function sendNotification(button, user, itemName) {
+        // Show alert notification
+        alert(`Notification sent to ${user} for the item: ${itemName}`);
+
+        // Change button text
+        button.innerText = "Notification Sent Successfully";
+
+        // Update button style to indicate it has been clicked
+        button.style.backgroundColor = "#4CAF50"; // Green color for success
+        button.disabled = true; // Disable button to prevent multiple clicks
+    }
+</script>

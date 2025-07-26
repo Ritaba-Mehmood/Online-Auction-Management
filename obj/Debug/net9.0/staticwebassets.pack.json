@@ -1,0 +1,357 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SemesterProj.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SemesterProj.d46zs406qa.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\js\\auth.js",
+      "PackagePath": "staticwebassets\\js\\auth.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\0763a70d-f890-4376-a6f7-5ac5cf27c56c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0763a70d-f890-4376-a6f7-5ac5cf27c56c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\11046e10-9f0b-4bd6-b2b2-b1c3044d6cb1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\11046e10-9f0b-4bd6-b2b2-b1c3044d6cb1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\2eab9679-d321-4170-93f6-89319805121e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2eab9679-d321-4170-93f6-89319805121e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\3ea4f661-dd93-41c3-87e3-857e669b2c9d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3ea4f661-dd93-41c3-87e3-857e669b2c9d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\43aa2a55-8e2d-4de2-8631-33dc596b37fe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\43aa2a55-8e2d-4de2-8631-33dc596b37fe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\5911cff7-9e3a-46e3-9cef-38ed31e56ba9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5911cff7-9e3a-46e3-9cef-38ed31e56ba9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\5de5d193-3299-4a3e-a8b0-8f13f0865220.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5de5d193-3299-4a3e-a8b0-8f13f0865220.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\67e57e30-1bba-4a34-9160-6d1585e081f3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\67e57e30-1bba-4a34-9160-6d1585e081f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\6f198ec3-1c8f-47df-bf11-d70890983c0b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6f198ec3-1c8f-47df-bf11-d70890983c0b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\b79c1752-f5d0-4896-8f7a-1a54de3f7b5b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b79c1752-f5d0-4896-8f7a-1a54de3f7b5b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\bc77287d-4966-4e6e-a9c4-db6df087ba11.jpg",
+      "PackagePath": "staticwebassets\\uploads\\bc77287d-4966-4e6e-a9c4-db6df087ba11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\bc85cf89-2b6e-4210-b2f5-93429d495f2f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\bc85cf89-2b6e-4210-b2f5-93429d495f2f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\c9f4c53c-8c8f-42ae-aaab-f048c5772352.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c9f4c53c-8c8f-42ae-aaab-f048c5772352.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\cb183a63-a1fe-45ea-967f-6bf7835cbb38.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cb183a63-a1fe-45ea-967f-6bf7835cbb38.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\ea5ee77f-2275-41bc-aabd-a8ab6b390b3c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ea5ee77f-2275-41bc-aabd-a8ab6b390b3c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Computer World\\source\\repos\\SemesterProj\\wwwroot\\uploads\\fc443ced-108e-40f5-90de-3ba9de233379.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fc443ced-108e-40f5-90de-3ba9de233379.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SemesterProj.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SemesterProj.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.SemesterProj.props",
+      "PackagePath": "build\\SemesterProj.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.SemesterProj.props",
+      "PackagePath": "buildMultiTargeting\\SemesterProj.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.SemesterProj.props",
+      "PackagePath": "buildTransitive\\SemesterProj.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

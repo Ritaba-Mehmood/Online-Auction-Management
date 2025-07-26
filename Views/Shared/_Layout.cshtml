@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SemesterProj</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+     <link rel="stylesheet" href="~/css/custom.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+    <link rel="stylesheet" href="~/SemesterProj.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+    <style>
+
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-3" style="border-bottom: 2px solid #DAA520;">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-gavel"></i> AuctionHub
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <!-- Centered Navigation Links -->
+                    <ul class="navbar-nav mx-auto">
+                        @if (!(User.Identity?.IsAuthenticated == true && User.IsInRole("Admin")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Items</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" asp-controller="Home" asp-action="HowItWorks">How It Works</a>
+
+                            </li>
+                        }
+                    </ul>
+
+                    <!-- Authentication Buttons -->
+                    <ul class="navbar-nav">
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            <!-- Show profile dropdown for non-admin users -->
+                            @if (!User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-user-circle me-1"></i> Profile
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="User" asp-action="Profile">
+                                                <i class="fas fa-user me-2"></i>My Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="User" asp-action="Sell">
+                                                <i class="fas fa-plus-circle me-2"></i>Sell Item
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <form asp-controller="Auth" asp-action="Logout" method="post">
+                                                <button type="submit" class="dropdown-item">
+                                                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <!-- Show only logout button for admin -->
+                                <li class="nav-item">
+                                    <form asp-controller="Auth" asp-action="Logout" method="post">
+                                        <button type="submit" class="btn btn-outline" style="color: white; background-color: #DAA520; border: none;">
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+
+                            }
+                        }
+                        else
+                        {
+                            <!-- Show login/register for unauthenticated users -->
+                            <li class="nav-item">
+                                <a class="btn btn-outline-primary" asp-controller="Auth" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-success ms-2" asp-controller="Auth" asp-action="Register">Register</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+            <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    @if (!(ViewData["HideFooter"] as bool? == true))
+    {
+        <footer class="text-light pt-5 border-top border-warning">
+            <div class="container">
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="text-warning">About AuctionHub</h5>
+                        <p>Premium auction platform connecting collectors and enthusiasts with rare and valuable items from around the world since 2012.</p>
+                    </div>
+                    <!-- Quick Links Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="text-warning">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-chevron-right me-2 text-warning"></i>Home</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-chevron-right me-2 text-warning"></i>Auctions</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-chevron-right me-2 text-warning"></i>How It Works</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-chevron-right me-2 text-warning"></i>About Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-chevron-right me-2 text-warning"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Categories Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="text-warning">Categories</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-gem me-2 text-warning"></i>Jewelry</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-palette me-2 text-warning"></i>Art</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-car me-2 text-warning"></i>Automobiles</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-home me-2 text-warning"></i>Real Estate</a></li>
+                            <li><a href="#" class="text-decoration-none text-light d-flex align-items-center"><i class="fas fa-guitar me-2 text-warning"></i>Collectibles</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="text-warning">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i>123 Auction Avenue, NY</li>
+                            <li class="d-flex align-items-center mb-2"><i class="fas fa-phone me-2 text-warning"></i>+1 (555) 123-4567</li>
+                            <li class="d-flex align-items-center mb-2"><i class="fas fa-envelope me-2 text-warning"></i><a href="mailto:support@auctionhub.com" class="text-decoration-none text-light">support@auctionhub.com</a></li>
+                            <li class="d-flex align-items-center"><i class="fas fa-headset me-2 text-warning"></i>24/7 Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Bar -->
+            <div style="background-color: #DAA520; color: #121212; padding: 10px 0; text-align: center; margin: 0;">
+                <p class="mb-0" style="margin: 0;">Empowering Auctions Since 2012</p>
+            </div>
+        </footer>
+
+
+    }
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,495 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+ 
+<div class="banner">
+    <div class="banner-content">
+        <h1>Welcome to AuctionHub</h1>
+        <p>Explore a world of exclusive items, bid now and own the extraordinary.</p>
+    </div>
+</div>
+
+<style>
+    :root {
+        --primary: #121212;
+        --secondary: #DAA520;
+        --accent: #FFFFFF;
+    }
+
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1612831819448-ec5ef5299b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+        background-size: cover;
+        background-position: center;
+        color: var(--accent);
+        padding: 3rem 1.5rem;
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+    }
+
+    .banner-content h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: var(--secondary);
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-content p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+</style>
+<div class="container-fluid p-0 position-relative" style="height: 50vh; max-height: 800px; overflow: hidden; border: 5px solid #DAA520; border-radius: 12px;">
+    <!-- Background Image -->
+    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+         alt="Auction items"
+         class="w-100 h-100"
+         style="object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1; filter: brightness(50%);">
+
+    <!-- Dark Overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 2; border-radius: 12px;"></div>
+
+    <!-- Content -->
+    <div class="position-relative d-flex align-items-center h-100" style="z-index: 3;">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 fw-bold mb-4" style="color: #DAA520; text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);">PREMIUM AUCTIONS</h1>
+            <p class="lead mb-5" style="font-size: 1.5rem; max-width: 800px; margin: 0 auto;">Discover rare collectibles and luxury items from around the world</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-lg px-4 py-3" style="background-color: #DAA520; color: #121212; font-weight: 600;">BROWSE ITEMS</a>
+                <a href="#" class="btn btn-lg px-4 py-3 btn-outline-light">HOW IT WORKS</a>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<style>
+    :root {
+        --primary: #121212;
+        --secondary: #DAA520;
+        --accent: #FFFFFF;
+    }
+
+    /* Your existing banner styles */
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1612831819448-ec5ef5299b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+        background-size: cover;
+        background-position: center;
+        color: var(--accent);
+        padding: 3rem 1.5rem;
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+    }
+
+    /* New styles for the items page */
+    .items-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 2rem;
+        margin-bottom:50px;
+    }
+/* 
+    .filter-sidebar {
+        width: 250px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    } */
+    .filter-sidebar {
+        width: 250px;
+        background: var(--primary);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: var(--accent);
+    }
+
+    .items-grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
+        gap: 20px;
+    }
+
+   
+    .item-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+
+        .item-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .item-image {
+        height: 300px; /* Taller image */
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .item-details {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .item-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: var(--primary);
+    }
+
+    .item-price {
+        color: var(--secondary);
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .item-bid {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .bid-btn {
+        background: var(--secondary);
+        color: var(--accent);
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .filter-section {
+        margin-bottom: 20px;
+    }
+
+    .filter-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .filter-option {
+        margin: 5px 0;
+    }
+
+        .filter-option label {
+            margin-left: 5px;
+        }
+</style>
+
+<div class="container items-container">
+    <!-- Filter Sidebar -->
+    <div class="filter-sidebar">
+        <div class="filter-section">
+            <div class="filter-title">Search</div>
+            <input type="text" id="searchInput" class="search-box" placeholder="Search items...">
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-title">Categories</div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat-all" class="category-filter" value="all" checked>
+                <label for="cat-all">All Categories</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat-jewelry" class="category-filter" value="Jewellery" checked>
+                <label for="cat-jewelry">Jewellery</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat-painting" class="category-filter" value="Painting" checked>
+                <label for="cat-painting">Painting</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat-vehicle" class="category-filter" value="Vehicle" checked>
+                <label for="cat-vehicle">Vehicle</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat-instrument" class="category-filter" value="Instrument" checked>
+                <label for="cat-instrument">Instrument</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat-art" class="category-filter" value="Art and Decor" checked>
+                <label for="cat-art">Art & Decor</label>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-title">Bid Status</div>
+            <div class="filter-option">
+                <input type="radio" id="status-all" name="bidStatus" value="all" checked>
+                <label for="status-all">All</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" id="status-active" name="bidStatus" value="Active">
+                <label for="status-active">Active</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" id="status-inactive" name="bidStatus" value="Inactive">
+                <label for="status-inactive">Inactive</label>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-title">Price Range</div>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                <input type="number" id="minPrice" placeholder="Min" style="width: 50%; padding: 5px;">
+                <input type="number" id="maxPrice" placeholder="Max" style="width: 50%; padding: 5px;">
+            </div>
+            <button id="applyPrice" class="bid-btn" style="width: 100%;">Apply</button>
+        </div>
+    </div>
+
+    <!-- Items Grid -->
+    <div class="items-grid" id="itemsGrid">
+        <!-- Items will be dynamically inserted here -->
+    </div>
+</div>
+
+<script>
+    // Sample data from your items
+       const itemsData = [
+        {
+            id: 3,
+            title: "Original Stone",
+            description: "hj",
+            image: "/uploads/5911cff7-9e3a-46e3-9cef-38ed31e56ba9.jpg",
+            category: "Stones",
+            currentBid: 0.00,
+            startingPrice: 230.00,
+            seller: "ali",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 3:57 PM"
+        },
+        {
+            id: 4,
+            title: "Chandlier",
+            description: "hjh",
+            image: "/uploads/2eab9679-d321-4170-93f6-89319805121e.jpg",
+            category: "Painting",
+            currentBid: 0.00,
+            startingPrice: 87.00,
+            seller: "ali",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:00 PM"
+        },
+        {
+            id: 5,
+            title: "Violin",
+            description: "Add a touch of elegance to your phone with this stunning violin wallpaper! 🎶✨ Perfect for music lovers.",
+            image: "/uploads/bc85cf89-2b6e-4210-b2f5-93429d495f2f.jpg",
+            category: "Instrument",
+            currentBid: 2222.00,
+            startingPrice: 100.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:04 PM"
+        },
+        {
+            id: 6,
+            title: "Sports car",
+            description: "Discover the perfect blend of performance and comfort with the Toyota Corolla, 2021. Powered by a 1.8L petrol engine...",
+            image: "/uploads/bc77287d-4966-4e6e-a9c4-db6df087ba11.jpg",
+            category: "Vehicle",
+            currentBid: 0.00,
+            startingPrice: 200.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:05 PM"
+        },
+        {
+            id: 7,
+            title: "Elegant Diamond Ring",
+            description: "Celebrate life's special moments with this stunning diamond ring, a symbol of elegance and sophistication...",
+            image: "/uploads/c9f4c53c-8c8f-42ae-aaab-f048c5772352.jpg",
+            category: "Jewellery",
+            currentBid: 0.00,
+            startingPrice: 100.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:10 PM"
+        },
+        {
+            id: 8,
+            title: "Majestic Raven - Original Oil Painting",
+            description: "This captivating oil painting of a raven brings a mysterious and powerful presence to any space...",
+            image: "/uploads/0763a70d-f890-4376-a6f7-5ac5cf27c56c.jpg",
+            category: "Painting",
+            currentBid: 0.00,
+            startingPrice: 300.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:13 PM"
+        },
+        {
+            id: 9,
+            title: "Vintage Crystal Chandelier",
+            description: "Elevate your space with this exquisite vintage crystal chandelier, a masterpiece of elegance and timeless beauty...",
+            image: "/uploads/6f198ec3-1c8f-47df-bf11-d70890983c0b.jpg",
+            category: "Art and Decor",
+            currentBid: 600.00,
+            startingPrice: 400.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:15 PM"
+        },
+        {
+            id: 10,
+            title: "Sleek and Functional Smartwatch",
+            description: "Experience the perfect blend of style, functionality, and technology with this sleek smartwatch...",
+            image: "/uploads/67e57e30-1bba-4a34-9160-6d1585e081f3.jpg",
+            category: "Jewellery",
+            currentBid: 6000.00,
+            startingPrice: 500.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:18 PM"
+        },
+        {
+            id: 11,
+            title: "Rare Vintage Coin",
+            description: "Own a piece of history with this rare vintage coin, a collector's treasure that speaks of a bygone era...",
+            image: "/uploads/fc443ced-108e-40f5-90de-3ba9de233379.jpg",
+            category: "Art and Decor",
+            currentBid: 0.00,
+            startingPrice: 700.00,
+            seller: "aliza",
+            bidStatus: "Active",
+            auctionEnds: "7/5/2025 4:19 PM"
+        }       
+       
+    ];
+
+
+    // Function to render items
+    // function renderItems(items) {
+    //     const itemsGrid = document.getElementById('itemsGrid');
+    //     itemsGrid.innerHTML = '';
+
+    //     items.forEach(item => {
+    //         const itemCard = document.createElement('div');
+    //         itemCard.className = 'item-card';
+
+    //         itemCard.innerHTML = `
+    //             <img src="${item.image}" alt="${item.title}" class="item-image">
+    //             <div class="item-details">
+    //                 <div class="item-title">${item.title}</div>
+    //                 <div class="item-category">${item.category}</div>
+    //                 <div class="item-price">Current Bid: $${item.currentBid.toFixed(2)}</div>
+    //                 <div class="item-starting">Starting: $${item.startingPrice.toFixed(2)}</div>
+    //                 <div class="item-seller">Seller: ${item.seller}</div>
+    //                 <div class="item-auction">Ends: ${item.auctionEnds}</div>
+    //                 <div class="item-bid">
+    //                     <span class="item-status" style="color: ${item.bidStatus === 'Active' ? 'green' : 'red'}">${item.bidStatus}</span>
+    //                     <button class="bid-btn">Bid Now</button>
+    //                 </div>
+    //             </div>
+    //         `;
+
+    //         itemsGrid.appendChild(itemCard);
+    //     });
+    // }
+        function renderItems(items) {
+        const itemsGrid = document.getElementById('itemsGrid');
+        itemsGrid.innerHTML = '';
+
+        items.forEach(item => {
+            const itemCard = document.createElement('div');
+            itemCard.className = 'item-card';
+
+            itemCard.innerHTML = `
+                <img src="${item.image}" alt="${item.title}" class="item-image">
+                <div class="item-details">
+                    <div class="item-title">${item.title}</div>
+                    <button class="bid-btn">Bid Now</button>
+                </div>
+            `;
+
+            itemsGrid.appendChild(itemCard);
+        });
+    }
+
+    // Function to apply filters
+    function applyFilters() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const selectedCategories = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value);
+        const bidStatus = document.querySelector('input[name="bidStatus"]:checked').value;
+        const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+        const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+
+        const filteredItems = itemsData.filter(item => {
+            // Search filter
+            const matchesSearch = item.title.toLowerCase().includes(searchTerm) ||
+                                item.description.toLowerCase().includes(searchTerm);
+
+            // Category filter
+            const matchesCategory = selectedCategories.includes('all') ||
+                                  selectedCategories.includes(item.category);
+
+            // Status filter
+            const matchesStatus = bidStatus === 'all' ||
+                                item.bidStatus === bidStatus;
+
+            // Price filter
+            const matchesPrice = item.currentBid >= minPrice &&
+                                item.currentBid <= maxPrice;
+
+            return matchesSearch && matchesCategory && matchesStatus && matchesPrice;
+        });
+
+        renderItems(filteredItems);
+    }
+
+    // Initial render
+    renderItems(itemsData);
+
+    // Event listeners for filters
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    document.querySelectorAll('.category-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+    });
+    document.querySelectorAll('input[name="bidStatus"]').forEach(radio => {
+        radio.addEventListener('change', applyFilters);
+    });
+    document.getElementById('applyPrice').addEventListener('click', applyFilters);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
